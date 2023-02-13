@@ -10,13 +10,14 @@ namespace SnakeandLadder
     {
         public static void SnakeandLadderSinglePlayer()
         {
-            int Position = 0;
+            int Position = 0,count=0;
             Console.WriteLine("Player Position: " + Position);
             Random random= new Random();
             while (Position < 100 )
             {
                 int die = random.Next(1, 7);
                 Console.WriteLine("Random Number: " + die);
+                count++;
 
                 Random random1 = new Random();
                 int Option = random1.Next(1, 4);
@@ -56,6 +57,7 @@ namespace SnakeandLadder
                         break;
                 }
             }
+            Console.WriteLine("\nNumber of time the die rolled is: " + count);
         }
     }
 }
