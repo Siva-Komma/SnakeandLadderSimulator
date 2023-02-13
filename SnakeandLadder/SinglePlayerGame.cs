@@ -31,7 +31,15 @@ namespace SnakeandLadder
                     case 2:
                         Console.WriteLine("Ladder");
                         Position += die;
-                        Console.WriteLine("After getting ladder player Position: " + Position);
+                        if (Position > 100)
+                        {
+                            Position = Position - die;
+                            Console.WriteLine("After getting ladder player position more than 100th position: " + Position);
+                        }
+                        else
+                        {
+                            Console.WriteLine("After getting ladder player Position: " + Position);
+                        }
                         break;
                     case 3:
                         Console.WriteLine("Snake");
